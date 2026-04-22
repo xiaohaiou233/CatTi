@@ -1,19 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh_CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试捏</title> 
+    <title>CatTi</title> 
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .page-active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .home-pixel-title {
+            margin-top: 13vh;         /* 距离顶部 15% 视口高度*/
+        }
+
+        .home-pixel-title img {
+            width: 256px;             
+            height: auto;             
+            display: block;
+            image-rendering: crisp-edges;   /* 保持像素锐利 */
+            image-rendering: pixelated;     /* 对于 Chrome/Edge 更彻底 */
+        }
+
+
+    </style>
 </head>
 <body>
-    <ol>
-        <h1>
-        <li>
-            hello
-        </li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        </h1>
-    </ol>
+    <!--初始页面--> 
+    <div class="page-active">
+        <!--像素标题-->
+        <div class="home-pixel-title">
+            <img src="assets/pixle-title.png" alt="">
+        </div>
+        <!--猫猫动图-->
+        <div class="home-cat-image">
+
+        </div>
+
+        <!--进入按钮-->
+        <div class="home-button">
+
+        </div>
+
+    </div>
 </body>
+
+<javascript>
+    
+</javascript>
+
 </html>
