@@ -4,59 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CatTi</title> 
-    <style>
-        
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        .page-active {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-
-        .home-pixel-title {
-            margin-top: 13vh;         /* 距离顶部 15% 视口高度*/
-        }
-
-        .home-pixel-title img {
-            width: 256px;             
-            height: auto;             
-            display: block;
-            image-rendering: crisp-edges;   /* 保持像素锐利 */
-            image-rendering: pixelated;     /* 对于 Chrome/Edge 更彻底 */
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--初始页面--> 
-    <div class="page-active">
+    <div class="home-page">
         <!--像素标题-->
-        <div class="home-pixel-title">
+        <div class="home-pixelTitle">
             <img src="assets/pixle-title.png" alt="">
         </div>
         <!--猫猫动图-->
-        <div class="home-cat-image">
-
+        <div class="home-catImage">
+            <img id="pixel_cat" src="">
         </div>
 
         <!--进入按钮-->
         <div class="home-button">
-
+            <button id="home-startButton">进入</button>
         </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
-
-<javascript>
-    
-</javascript>
 
 </html>

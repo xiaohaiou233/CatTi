@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    border: none;
+    padding: 0%;
+    
+}
+
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+/* 像素标题样式 */
+.home-pixelTitle {
+    margin-top: 13vh;         /* 距离顶部 15% 视口高度*/
+}
+
+.home-pixelTitle img {
+    width: 256px;             
+    height: auto;             
+    display: block;
+    image-rendering: pixelated;
+}
+/* 猫猫动图样式 */
+.home-catImage {
+    margin-top: 3vh;
+    image-rendering: pixelated;
+}
+
+.home-catImage img {
+    width: 256px;             
+    height: auto;             
+    display: block;
+    image-rendering: pixelated;
+}
+/* 进入按钮样式 */
+.home-button {
+    margin-top: 5vh;
+    text-align: center;
+}
+
