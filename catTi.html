@@ -1,30 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh_CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CatTi</title> 
+    <title>CatTi</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!--初始页面--> 
+    <!--初始页面-->
     <div class="home-page">
-        <!--像素标题-->
-        <div class="home-pixelTitle">
-            <img src="assets/pixle-title.png" alt="">
-        </div>
-        <!--猫猫动图-->
-        <div class="home-catImage">
-            <img id="pixel_cat" src="">
-        </div>
+        <!-- 主页背景 -->
+        <div class="home-background">
+            <!-- 背景装饰层 -->
+            <div class="home-BgDecorations">
+                <img class="home-BgDecoration" id="CatSpoor1" src="assets/CatSpoor1.png" alt="">
+                <img class="home-BgDecoration" id="CatSpoor2" src="assets/CatSpoor2.png" alt="">
+            </div>
+            <!-- 顶部装饰 -->
+            <div class="home-pageEdge" id="top"></div>
+            <hr class="home-line" id="top">
 
-        <!--进入按钮-->
-        <div class="home-button">
-            <button id="home-startButton">进入</button>
-        </div>
+            <div class="home-content">
+                <!--像素标题-->
+                <img id="home-pixelTitle" src="assets/pixel-title.png" alt="">
+                <img id="home-pixelSubtitle" src="assets/pixel-subtitle1.png" alt="">
+                <!--猫猫动图-->
+                <div class="home-catImage">
+                    <img id="home-catBg" src="assets/catImage-background.png "> 
+                    <img id="pixel_cat" src="">
+                </div>
 
+                <!--进入按钮-->
+                <div class="home-button">
+                    <button id="home-startButton">
+                        <img src="assets/pixel-button.png" alt="">
+                    </button>
+                </div>
+            </div>
+            
+
+            <!-- 底部装饰 -->
+            <hr class="home-line" id="bottom">
+            <div class="home-pageEdge" id="bottom"></div>
+        </div>
     </div>
+
+
     <script src="script.js"></script>
 </body>
-
 </html>

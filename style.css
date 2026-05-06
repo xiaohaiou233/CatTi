@@ -1,49 +1,135 @@
-
-* {
+ *{
     margin: 0;
     padding: 0;
-}
+ }
 
-button{
+ button{
+      border: none;
+      background: none;
+      cursor: pointer;
+ }
+ /* ---------主页背景装饰--------- */
+
+ /* 背景排版 */
+ .home-background{
+    display: flex;
+    position:relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-color: #fdfbee;
+    overflow: hidden;
+ }
+
+ /* 主页粉色边缘装饰条 */
+ .home-pageEdge{
+    position: relative;
+    background-color: #fdd1d0;
+    height: 5vh;
+    width: 100%;
+ }
+
+/* 装饰条像素锯齿 */
+ .home-pageEdge#top::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: repeating-linear-gradient( /* 渐变实现像素锯齿 */
+        to right,
+        #fdd1d0 0px,
+        #fdd1d0 6px,
+        #fdfbee 6px,
+        #fdfbee 12px
+        );
+ }
+
+ .home-pageEdge#bottom::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: repeating-linear-gradient( /* 渐变实现像素锯齿 */
+        to right,
+        #fdd1d0 0px,
+        #fdd1d0 6px,
+        #fdfbee 6px,
+        #fdfbee 12px
+        );
+ }
+
+ /* 背景装饰 */
+ .home-BgDecoration{
+    position: absolute;
+    max-width: none;
+    max-height: none;
+    top: 0;
+    left: 0;
+    z-index: 0; 
+ }
+
+
+ /* 蓝色装饰线 */
+ .home-line{
+    height: 4px; /* 蓝线厚度 */
+    width: 100%;
+    background-color: #b8e1f5;
     border: none;
-    padding: 0%;
-    
-}
+ }
 
-.home-page {
+ .home-line#top{
+    margin-top: 12px; /* 距离顶部装饰条12px */
+ }
+
+ .home-line#bottom{
+    margin-top: auto; /* 将蓝线推到容器底部 */
+    margin-bottom: 12px; /* 距离底部装饰条12px */
+ }
+
+
+/* ---------主页内容--------- */
+
+/* 内容排版 */
+ .home-content{
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-start;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-/* 像素标题样式 */
-.home-pixelTitle {
-    margin-top: 13vh;         /* 距离顶部 15% 视口高度*/
-}
+    align-items: center;
+    position: absolute;
+    top: calc(5vh + 20px + 0vh); /* 顶部装饰条高度 + 蓝线高度 + 间距 */
+    bottom: calc(5vh + 20px + 0vh); /* 底部装饰条高度 + 蓝线高度 + 间距 */
+    /* background-color: black; */
+    z-index: 1;
+ }
 
-.home-pixelTitle img {
-    width: 256px;             
-    height: auto;             
+ #home-pixelTitle{
+    image-rendering: pixelated;
     display: block;
-    image-rendering: pixelated;
-}
-/* 猫猫动图样式 */
-.home-catImage {
-    margin-top: 3vh;
-    image-rendering: pixelated;
-}
+    height: auto;
+    width: 512px;
+ }
 
-.home-catImage img {
-    width: 256px;             
-    height: auto;             
+ .home-catImage{
+    image-rendering: pixelated;
     display: block;
-    image-rendering: pixelated;
-}
-/* 进入按钮样式 */
-.home-button {
-    margin-top: 5vh;
-    text-align: center;
-}
+    position: relative;
+    margin-top: 2vh;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+ }
 
+ .home-catImage#home-catBg{
+    width: 256px;
+    margin-top: 20px;
+ }
+
+ .home-button{
+   display: block;
+   margin-top: 2vh;
+ }
