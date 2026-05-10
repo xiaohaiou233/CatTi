@@ -20,6 +20,12 @@
     height: 100vh;
     background-color: #fdfbee;
     overflow: hidden;
+
+    /* 背景装饰 */
+    background-image: url('assets/background-decorations.png');
+    background-repeat: no-repeat;
+    background-size: auto;            
+    background-position: center;      
  }
 
  /* 主页粉色边缘装饰条 */
