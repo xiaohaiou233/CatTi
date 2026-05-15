@@ -8,19 +8,19 @@
 </head>
 <body>
     <!--初始页面-->
-    <div class="home-page">
+    <div class="page home-page page-active">
         <!-- 主页背景 -->
-        <div class="home-background">
+        <div class="background home">
             <!-- 背景装饰层 -->
-             <!-- （改为背景图片进行装饰） -->
+             <!-- （已废弃，改为背景图片进行装饰） -->
             <!-- <div class="home-BgDecorations">
                 <img class="home-BgDecoration" id="CatSpoor1" src="assets/CatSpoor1.png" alt="">
                 <img class="home-BgDecoration" id="CatSpoor2" src="assets/CatSpoor2.png" alt="">
             </div> -->
 
             <!-- 顶部装饰 -->
-            <div class="home-pageEdge" id="top"></div>
-            <hr class="home-line" id="top">
+            <div class="pageEdge home" id="top"></div>
+            <hr class="line home" id="top">
 
             <!-- 主内容 -->
             <div class="home-content">
@@ -43,12 +43,61 @@
         
             
             <!-- 底部装饰 -->
-            <hr class="home-line" id="bottom">
-            <div class="home-pageEdge" id="bottom"></div>
+            <hr class="line home" id="bottom">
+            <div class="pageEdge home" id="bottom"></div>
         </div>
     </div>
 
+    <!-- 答题页 -->
+    <div class="page question-page">
+        <div class="background question">
+            <!-- 顶部装饰 -->
+            <div class="pageEdge question" id="top"></div>
+            <hr class="line question" id="top">
+    
+            <!-- 主内容 -->
+            <div class="question-content">
+                <!-- 进度条 -->
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
 
+                <div class="question-text" id="question">
+
+                </div>
+                <div class="question-options" id="options">
+                    <button class="option-button" id="option1">选项1</button>
+                    <button class="option-button" id="option2">选项2</button>
+                    <button class="option-button" id="option3">选项3</button>
+                    <button class="option-button" id="option4">选项4</button>
+                </div>
+                    
+            </div>
+            
+            <!-- 底部装饰 -->
+            <hr class="line question" id="bottom">
+            <div class="pageEdge question" id="bottom"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 结果页 -->
+    <div class="page result-page">
+        <div class="background result">
+            <!-- 顶部装饰 -->
+            <div class="pageEdge question" id="top"></div>
+            <hr class="line question" id="top">
+            <div class="result-content">
+
+                <div class="result-text" id="result">
+                    <p>resultpage-test</p>
+                </div>
+            </div>
+            <!-- 底部装饰 -->
+            <hr class="line question" id="bottom">
+            <div class="pageEdge question" id="bottom"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

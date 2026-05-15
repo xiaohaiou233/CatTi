@@ -1,3 +1,4 @@
+ /* 通用格式 */
  *{
     margin: 0;
     padding: 0;
@@ -8,10 +9,17 @@
       background: none;
       cursor: pointer;
  }
- /* ---------主页背景装饰--------- */
 
- /* 背景排版 */
- .home-background{
+ .page{
+    display: none;
+ }
+
+ .page.page-active{
+   display: block;
+ }
+
+
+ .background{
     display: flex;
     position:relative;
     flex-direction: column;
@@ -20,16 +28,10 @@
     height: 100vh;
     background-color: #fdfbee;
     overflow: hidden;
-
-    /* 背景装饰 */
-    background-image: url('assets/background-decorations.png');
-    background-repeat: no-repeat;
-    background-size: auto;            
-    background-position: center;      
  }
-
- /* 主页粉色边缘装饰条 */
- .home-pageEdge{
+/* 通用背景 */
+ /* 粉色边缘装饰条 */
+ .pageEdge{
     position: relative;
     background-color: #fdd1d0;
     height: 5vh;
@@ -37,7 +39,7 @@
  }
 
 /* 装饰条像素锯齿 */
- .home-pageEdge#top::after{
+ .pageEdge#top::after{
     content: "";
     position: absolute;
     bottom: 0;
@@ -53,7 +55,7 @@
         );
  }
 
- .home-pageEdge#bottom::after{
+ .pageEdge#bottom::after{
     content: "";
     position: absolute;
     top: 0;
@@ -69,33 +71,45 @@
         );
  }
 
- /* 背景装饰 */
- .home-BgDecoration{
-    position: absolute;
-    max-width: none;
-    max-height: none;
-    top: 0;
-    left: 0;
-    z-index: 0; 
- }
-
-
  /* 蓝色装饰线 */
- .home-line{
+ .line{
     height: 4px; /* 蓝线厚度 */
     width: 100%;
     background-color: #b8e1f5;
     border: none;
  }
 
- .home-line#top{
+ .line#top{
     margin-top: 12px; /* 距离顶部装饰条12px */
  }
 
- .home-line#bottom{
+ .line#bottom{
     margin-top: auto; /* 将蓝线推到容器底部 */
     margin-bottom: 12px; /* 距离底部装饰条12px */
  }
+
+
+ /* 主页 */
+ /* ---------主页背景装饰--------- */
+
+ .background.home{
+    background-image: url('assets/background-decorations.png');
+    background-repeat: no-repeat;
+    background-size: auto;            
+    background-position: center;      
+ }
+
+
+
+ /* 背景装饰 */
+ /* 已废弃，改用背景图片 */
+ /* .home-BgDecoration{
+    position: absolute;
+    max-width: none;
+    max-height: none;
+    top: 0;
+    left: 0;
+ } */
 
 
 /* ---------主页内容--------- */
@@ -110,7 +124,6 @@
     top: calc(5vh + 20px + 0vh); /* 顶部装饰条高度 + 蓝线高度 + 间距 */
     bottom: calc(5vh + 20px + 0vh); /* 底部装饰条高度 + 蓝线高度 + 间距 */
     /* background-color: black; */
-    z-index: 1;
  }
 
  #home-pixelTitle{
@@ -138,4 +151,43 @@
  .home-button{
    display: block;
    margin-top: 2vh;
+ }
+
+ /* 答题页 */
+ /* ---------答题页背景装饰--------- */
+
+ .background.question{
+      /* 背景装饰 */
+      background-image: url('');
+      background-repeat: no-repeat;
+      background-size: auto;            
+      background-position: center;
+ }
+ /* 答题内容排版 */
+ .question-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: calc(5vh + 20px + 0vh); /* 顶部装饰条高度 + 蓝线高度 + 间距 */
+    bottom: calc(5vh + 20px + 0vh); /* 底部装饰条高度 + 蓝线高度 + 间距 */
+    width: 80%;
+ }
+
+ /* ---------答题进度条--------- */
+
+ .progress-bar{
+    width: 80%;
+    height: 20px;
+    background-color: #e0e0e0;
+    /* border-radius: 10px;
+    margin-top: 20px; */
+ }
+
+ 
+ /* ---------问题--------- */
+ .question-text{
+   
+    text-align: center;
  }

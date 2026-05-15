@@ -1,4 +1,7 @@
 (function () {
+
+  // 这部分负责根据窗口大小动态调整像素图的显示尺寸，保持像素风格的同时适应不同屏幕。
+
   // ***** 配置所有像素图 *****
   const items = [
     { 
@@ -67,13 +70,37 @@
     }
 
     img.style.width = `${item.originalWidth * scale}px`;
-    // img height auto 自动等比
   }
 
+
+  // ***** 页面切换 *****
+
+  function showPage(pageClass) {
+    // 隐藏所有页面
+    document.querySelectorAll('.page').forEach(page => {
+      page.classList.remove('page-active');
+    });
+    // 显示指定页面
+    document.querySelector(`.${pageClass}`).classList.add('page-active');
+  }
+
+  //主页按钮切换
+  document.getElementById('home-startButton').addEventListener('click', () => {
+    showPage('question-page');
+  });
+
+  //调试用
+showPage('home-page');
+// showPage('question-page');
+// showPage('result-page');
+
+  // ***** 自动更新 *****
+
+  //根据窗口大小调整所有像素图尺寸
   function updateAll() {
     items.forEach(updateImage);
   }
-
+  //防止频繁更新，窗口变动>100ms时才更新
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
